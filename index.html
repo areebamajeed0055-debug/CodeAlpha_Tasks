@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <header class="site-header">
+                    <h1 class="main-heading">Portfolio Gallery</h1>
+                    <div class="filter-nav">
+                        <button class="btn active" data-filter="all">All</button>
+                        <button class="btn" data-filter="web">Web Design</button>
+                        <button class="btn" data-filter="photo">Photography</button>
+                    </div>
+                </header>
+                <main class="gallery" id="portfolio-gallery">
+                    <div class="item" data-category="web">
+                        <img src="images/laptop.jpeg">
+                    </div>
+
+                    <div class="item" data-category="photo">
+                        <img src="images/img3.jpg">
+                    </div>
+
+                    <div class="item" data-category="web">
+                        <img src="images/img1.jpeg">
+                    </div>
+
+                    <div class="item" data-category="photo">
+                        <img src="images/img4.png">
+                    </div>
+                    <div class="item" data-category="web">
+                        <img src="images/img.jpeg">
+                    </div>
+                    <div class="item" data-category="photo">
+                        <img src="images/img5.png">
+                    </div>
+
+                </main>
+            </div>
+
+            <!-- Lightbox -->
+            <div class="lightbox" id="lightbox">
+                <button class="close-btn">&times;</button>
+                <button class="nav-arrow prev-arrow">&#10094;</button>
+                <img id="lightbox-img">
+                <button class="nav-arrow next-arrow">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
