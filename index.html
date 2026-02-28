@@ -5,77 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
-<body>
-    <div class="music-container">
 
-        <div class="music-body">
-            <div class="layer">
-                <div class="volume-slider">
-                    <span class="bar"></span>
-                    <input type='range' min='0.01' max='1' value='1' step='0.01' class="volumerange" />
-                </div>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <header class="site-header">
+                    <h1 class="main-heading">Portfolio Gallery</h1>
+                    <div class="filter-nav">
+                        <button class="btn active" data-filter="all">All</button>
+                        <button class="btn" data-filter="web">Web Design</button>
+                        <button class="btn" data-filter="photo">Photography</button>
+                    </div>
+                </header>
+                <main class="gallery" id="portfolio-gallery">
+                    <div class="item" data-category="web">
+                        <img src="images/laptop.jpeg">
+                    </div>
+
+                    <div class="item" data-category="photo">
+                        <img src="images/img3.jpg">
+                    </div>
+
+                    <div class="item" data-category="web">
+                        <img src="images/img1.jpeg">
+                    </div>
+
+                    <div class="item" data-category="photo">
+                        <img src="images/img4.png">
+                    </div>
+                    <div class="item" data-category="web">
+                        <img src="images/img.jpeg">
+                    </div>
+                    <div class="item" data-category="photo">
+                        <img src="images/img5.png">
+                    </div>
+
+                </main>
             </div>
-            <div class="top-icons">
-                <button class="volume btn" id="volume">
-                    <i id="volumeicon" class="fas fa-volume-up"></i>
-                </button>
-                <button class="list btn" id="list">
-                    <i class="fas fa-list"></i>
-                </button>
-            </div>
-            <div class="music-img">
-                <img src="images/img4.jpg" alt="song-images"
-                    id="img">
-            </div>
-            <div class="music-info">
-                <h2 id="title">Jeene Laga Hoon</h2>
-                <h6>Atif Aslam</h6>
-            </div>
-            <audio src="audio/audio1.mp3"
-                id="audio"></audio>
-            <div class="music-progress">
-                <div class="progress-bar">
-                    <span class="progress-line"></span>
-                    <input type='range' min='0' max='100' value='0' class="progress" id="progress" />
-                </div>
-                <div class="duration">
-                    <span class="current-time">00:00</span>
-                    <span class="duration-time">00:00</span>
-                </div>
-            </div>
-            <div class="music-controls">
-                <button class="repeat btn" id="repeat">
-                    <i class="fas fa-redo-alt"></i>
-                </button>
-                <div class="main-controls">
-                    <button class="prevbtn" id="prevbtn">
-                        <i class="fas fa-backward"></i>
-                    </button>
-                    <button class="playpause" id="playpause">
-                        <i id="playpause-btn" class="fas fa-play"></i>
-                    </button>
-                    <button class="nextbtn" id="nextbtn">
-                        <i class="fas fa-forward"></i>
-                    </button>
-                </div>
-                <button class="like btn" id="like">
-                    <i id="likeicon" class="far fa-heart"></i>
-                </button>
-            </div>
-            <div class="songs-list" id="songs-list">
-                <button class="list-close btn" id="listclose">
-                    <i class="fas fa-times"></i>
-                </button>
+
+            <!-- Lightbox -->
+            <div class="lightbox" id="lightbox">
+                <button class="close-btn">&times;</button>
+                <button class="nav-arrow prev-arrow">&#10094;</button>
+                <img id="lightbox-img">
+                <button class="nav-arrow next-arrow">&#10095;</button>
             </div>
         </div>
     </div>
+
+
+
+
     <script src="script.js"></script>
+
 </body>
 
 </html>
